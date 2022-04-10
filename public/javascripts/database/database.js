@@ -90,7 +90,7 @@ class Database {
 
     get_vehicles(res) {
         if (connected) {
-            request_sql = "SELECT name,img FROM `vehicles`"
+            request_sql = "SELECT name,image,description FROM `vehicles`"
             bdd.query(request_sql, (err, result) => {
                 if (err) {
                     console.log(err)
@@ -119,7 +119,7 @@ class Database {
                 }
                 if (result.length) {
                     console.log("connection reussi")
-                    res.send(JSON.stringify({valid: true, pseudo: result[0].pseudo, image: result[0].image}))
+                    res.send(JSON.stringify({valid: true, pseudo: result[0].pseudo}))
                 } else {
                     console.log("connection refuser")
                     res.send(JSON.stringify({error: "denied"}))

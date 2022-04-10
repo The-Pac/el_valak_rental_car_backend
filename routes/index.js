@@ -7,7 +7,6 @@ let database = new Database()
 router.post('/check_user', function (req, res, next) {
     console.log("une connexion arrive\n-ip:" + req.ip + "\n")
     res.setHeader('Content-Type', 'application/json');
-    //const newSecret = twofactor.generateSecret({ name: "Need for bite", account: req.body.username });
     database.check_user(res, req.body.username, req.body.password)
     res.status(200)
 });

@@ -1,7 +1,7 @@
 let configdb = {};
-configdb.username = 'root'
-configdb.password = 'RadijeT07210'
-configdb.host = 'localhost'
-configdb.database = 'DatabaseServerSide'
+configdb.username = 'PAC_Bdd'
+configdb.password = 'R.adijeT07210'
+configdb.host = '192.168.1.140'
+configdb.database = 'el_valak_car_rental'
 
 module.exports = configdb
